@@ -3,17 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>EcoTrack</title>
-
+  <title>Simple Photo Upload</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="container">
+  <div class="container">
 
-  <!-- AUTH -->
-  <section id="authPage" class="card">
+    <section id="authBox" class="card">
+      <h1>Photo Upload</h1>
 
-    <h1>EcoTrack</h
+      <input id="email" type="email" placeholder="Email">
+      <input id="password" type="password" placeholder="Password">
+
+      <button id="loginBtn">Login</button>
+      <button id="registerBtn" class="secondary">Register</button>
+
+      <p id="authMessage"></p>
+    </section>
+
+    <section id="appBox" class="card hidden">
+
+      <div class="top">
+        <div>
+          <h2>Upload Foto</h2>
+          <p id="userEmail"></p>
+        </div>
+
+        <button id="logoutBtn">Logout</button>
+      </div>
+
+      <input id="photoInput" type="file" accept="image/jpeg,image/png,image/webp">
+
+      <button id="uploadBtn">Upload</button>
+
+      <div id="progress"></div>
+
+      <h3>Foto Saya</h3>
+      <div id="gallery"></div>
+
+    </section>
+
+  </div>
+
+  <script type="module" src="app.js"></script>
+
+</body>
+</html>
